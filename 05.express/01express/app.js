@@ -20,13 +20,14 @@ app.get('/', (req, res) => { //전에처럼 path를 if문으로 도배를 하지
   res.sendFile(path.join(__dirname, '/index.html')); //현재폴더의 html파일 보내주기 //한 라우터에 send,json,sendFile,wrtieHead 같이쓰면 에러발생 //응답은 1번만
 });
 
+
 app.get('/about', (req, res) => {
   // res.writeHead(200,{'Content-Type': 'application/json'})
   // res.end(JSON.stringify({name:'seok'}))
   res.json({name:'seok'}); //res.json은 위에 두줄을 줄여놓은것
 });
 
-app.get('/category/:name', (req, res) => { //router parameter // req.params
+app.get('/category/:name', (req, res) => { // (라우트 매개변수)/:name -> req.params , /user/123?limit=5&skip=10 ->req.query {limit:'5',skip:'10'} , /* : wild card 
   // res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'})
   // res.end(`Hello, ${req.params.name}`)
   res.send(`Hello, ${req.params.name}`);//send가 http서버에서 whiteHead+end를 줄여놓은거

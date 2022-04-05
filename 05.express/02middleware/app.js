@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 
-dotenv.config();
+dotenv.config(); //환경변수에 설정 -> COOKIE_SECRET 비밀키 설정
 const app = express();
 app.set('port', process.env.PORT || 3000);
 
