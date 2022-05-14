@@ -4,7 +4,7 @@ module.exports = class User extends Sequelize.Model {
   static init(sequelize) {
     return super.init({
       name: {
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING(20), //mysql에선 varchar
         allowNull: false,
         unique: true,
       },
@@ -41,3 +41,4 @@ module.exports = class User extends Sequelize.Model {
     db.User.hasMany(db.Comment, { foreignKey: 'commenter', sourceKey: 'id' });
   }
 };
+//id는 자동으로 생성됨

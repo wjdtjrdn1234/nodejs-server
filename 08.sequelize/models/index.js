@@ -24,3 +24,4 @@ module.exports = db;
 
 
 //mysql ,sequelize, node 연결
+//여기서 model이 mysql에선 table임

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "nodejsbook",
-    "database": "nodejs",
+    "password": "cv5944ke",
+    "database": "nodejs", 
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
