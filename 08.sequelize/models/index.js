@@ -14,7 +14,7 @@ db.sequelize = sequelize;
 db.User = User;
 db.Comment = Comment;
 
-User.init(sequelize);
+User.init(sequelize); //sequelize넣어주는이유는 연결객체 이므로 //테이블,모델,시퀄라이즈 연결
 Comment.init(sequelize);
 
 User.associate(db);
@@ -24,4 +24,4 @@ module.exports = db;
 
 
 //mysql ,sequelize, node 연결
-//여기서 model이 mysql에선 table임
+//sequelize의 model ===  mysql에서 table

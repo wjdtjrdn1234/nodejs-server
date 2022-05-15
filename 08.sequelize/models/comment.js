@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 module.exports = class Comment extends Sequelize.Model {
   static init(sequelize) {
     return super.init({
-      comment: {
+      comment: { //commenter가 없는경우는 sequelize에서 관계 column이라고 따로 만듬
         type: Sequelize.STRING(100),
         allowNull: false,
       },
@@ -18,12 +18,12 @@ module.exports = class Comment extends Sequelize.Model {
       modelName: 'Comment',
       tableName: 'comments',
       paranoid: false,
-      charset: 'utf8mb4',
+      charset: 'utf8mb4', //mb4: 이모티콘 사용
       collate: 'utf8mb4_general_ci',
     });
   }
 
-  static associate(db) {
+  static associate(db) {//관계 column
     db.Comment.belongsTo(db.User, { foreignKey: 'commenter', targetKey: 'id' });
   }
 };
