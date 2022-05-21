@@ -36,13 +36,17 @@ module.exports = class User extends Sequelize.Model {
       collate: 'utf8_general_ci',
     });
   }
-
   static associate(db) {
     db.User.hasMany(db.Comment, { foreignKey: 'commenter', sourceKey: 'id' }); //db.Comment.belongTo(db.User, { foreignKey: 'commenter', targetKey: 'id' })
   }
   //테이블 관계정의
+
   //1:N관계
   //시퀄라이즈에서는 1:N관계를 hasMany로 표현
   //남의 Comment 테이블이 내 id를 commenter컬럼으로 사용중이다
+
+  //1:1 관계
+  //User.hasOne(db.Info, { foreignKey: 'UserId', sourceKey: 'id' })
+  //Info.belongsto(db.User, { foreignKey: 'UserId', targetKey: 'id' }) ->info에 컬럼이생김 
 };
 //id는 자동으로 생성됨
