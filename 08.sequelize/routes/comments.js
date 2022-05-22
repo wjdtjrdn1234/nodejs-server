@@ -17,7 +17,7 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router.route('/:id')
+router.route('/:id') //수정
   .patch(async (req, res, next) => {
     try {
       const result = await Comment.update({
@@ -31,7 +31,7 @@ router.route('/:id')
       next(err);
     }
   })
-  .delete(async (req, res, next) => {
+  .delete(async (req, res, next) => { //삭제
     try {
       const result = await Comment.destroy({ where: { id: req.params.id } });
       res.json(result);

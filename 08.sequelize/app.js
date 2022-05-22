@@ -16,7 +16,7 @@ nunjucks.configure('views', {
   watch: true,
 });
 
-sequelize.sync({ force: false }) //sequelize sync : node에서 mysql 연결
+sequelize.sync({ force: false }) //sequelize sync : node에서 mysql 연결 -> sync되는순간 db에 모델테이블 생성
   .then(() => {
     console.log('데이터베이스 연결 성공');
   })

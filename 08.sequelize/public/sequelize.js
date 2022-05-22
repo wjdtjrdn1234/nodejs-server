@@ -135,3 +135,6 @@ document.getElementById('comment-form').addEventListener('submit', async (e) => 
   e.target.userid.value = '';
   e.target.comment.value = '';
 });
+
+//시퀄라이즈 = 자바스크립트문 -> sql로 바꿔줌
+//npx sequelize db:create 

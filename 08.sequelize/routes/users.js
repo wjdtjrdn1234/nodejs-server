@@ -7,7 +7,7 @@ const router = express.Router();
 router.route('/')
   .get(async (req, res, next) => {
     try {
-      const users = await User.findAll();
+      const users = await User.findAll(); //모델은 전부 promise
       res.json(users);
     } catch (err) {
       console.error(err);
@@ -46,3 +46,8 @@ router.get('/:id/comments', async (req, res, next) => {
 });
 
 module.exports = router;
+
+//단순한 문자열 , binary : res.send
+//파일 : res.sendFile
+//템플릿엔진 : res.render
+//그외 api서버:  json
