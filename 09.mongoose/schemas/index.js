@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const connect = () => {
+const connect = () => { //mongoose연결
   if (process.env.NODE_ENV !== 'production') {
     mongoose.set('debug', true);
   }
-  mongoose.connect('mongodb://root:nodejsbook@localhost:27017/admin', {
+  mongoose.connect('mongodb://root:cv5944ke@localhost:27017/admin', {
     dbName: 'nodejs',
     useNewUrlParser: true,
     useCreateIndex: true,

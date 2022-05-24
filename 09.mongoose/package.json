@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app"
   },
-  "author": "ZeroCho",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
