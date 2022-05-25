@@ -21,3 +21,4 @@ const commentSchema = new Schema({
 module.exports = mongoose.model('Comment', commentSchema);
 
 //만약 populate를 안쓰면 나이24 ->25로 수정해야될때 일일히 수정해야됨 (ref안쓰고 commenter에 그냥 실제 user object삽입)
+//단 populate 속도는 느림

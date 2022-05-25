@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const connect = () => { //mongoose연결
+const connect = () => {//mongodb연결
   if (process.env.NODE_ENV !== 'production') {
-    mongoose.set('debug', true);
+    mongoose.set('debug', true); //디버그 모드 -> 쿼리를 볼 수 있음
   }
   mongoose.connect('mongodb://root:cv5944ke@localhost:27017/admin', {
     dbName: 'nodejs',
